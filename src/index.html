@@ -1,12 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Diary - My Diary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>My School Diary</h1>
+        <p>Keep track of your assignments, schedule, and notes!</p>
+    </header>
+
+    <!-- Sidebar for Quick Links -->
+    <aside>
+        <h2>Quick Links</h2>
+        <ul>
+            <li><a href="#assignments">Assignments</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#profile">Profile</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Assignments Section -->
+        <section id="assignments">
+            <h2>Recent Assignments</h2>
+            <ul>
+                <li>Math Homework - Due: Nov 2</li>
+                <li>History Essay - Due: Nov 4</li>
+                <li>Science Project - Due: Nov 6</li>
+            </ul>
+            <button>Add New Assignment</button>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <p>View your weekly schedule:</p>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Classes</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Math, Science, History</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>English, Physical Ed., Art</td>
+                </tr>
+                <!-- Add more days as needed -->
+            </table>
+            <button>Edit Schedule</button>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes">
+            <h2>Notes</h2>
+            <ul>
+                <li>Math - Study for upcoming test</li>
+                <li>Science - Review chapter on ecosystems</li>
+            </ul>
+            <button>Add New Note</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My School Diary. All rights reserved.</p>
+    </footer>
+</body>
 </html>
