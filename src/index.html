@@ -3,76 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Diary - My Diary</title>
+    <title>School Diary</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>My School Diary</h1>
-        <p>Keep track of your assignments, schedule, and notes!</p>
+        <h1>School Diary</h1>
+        <p>Stay organized and keep track of your schedule</p>
     </header>
-
-    <!-- Sidebar for Quick Links -->
-    <aside>
-        <h2>Quick Links</h2>
-        <ul>
-            <li><a href="#assignments">Assignments</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#notes">Notes</a></li>
-            <li><a href="#profile">Profile</a></li>
-        </ul>
-    </aside>
-
-    <!-- Main Content -->
+    
     <main>
-        <!-- Assignments Section -->
-        <section id="assignments">
-            <h2>Recent Assignments</h2>
+        <aside>
+            <h2>Navigation</h2>
             <ul>
-                <li>Math Homework - Due: Nov 2</li>
-                <li>History Essay - Due: Nov 4</li>
-                <li>Science Project - Due: Nov 6</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Notes</a></li>
+                <li><a href="#">Settings</a></li>
             </ul>
-            <button>Add New Assignment</button>
-        </section>
-
-        <!-- Schedule Section -->
-        <section id="schedule">
-            <h2>Schedule</h2>
-            <p>View your weekly schedule:</p>
-            <table>
-                <tr>
-                    <th>Day</th>
-                    <th>Classes</th>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>Math, Science, History</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>English, Physical Ed., Art</td>
-                </tr>
-                <!-- Add more days as needed -->
+        </aside>
+        
+        <section>
+            <h2>Weekly Schedule</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:30 - 9:50</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                    </tr>
+                    <tr>
+                        <td>10:10 - 11:30</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                        <td onclick="openModal(this)">Add Subject</td>
+                    </tr>
+                    <!-- Add more time slots as needed -->
+                </tbody>
             </table>
-            <button>Edit Schedule</button>
-        </section>
-
-        <!-- Notes Section -->
-        <section id="notes">
-            <h2>Notes</h2>
-            <ul>
-                <li>Math - Study for upcoming test</li>
-                <li>Science - Review chapter on ecosystems</li>
-            </ul>
-            <button>Add New Note</button>
         </section>
     </main>
-
-    <!-- Footer -->
+    
     <footer>
-        <p>&copy; 2024 My School Diary. All rights reserved.</p>
+        <p>&copy; 2024 School Diary. All rights reserved.</p>
     </footer>
+
+    <!-- Modal for Adding Subject -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3>Add Subject</h3>
+            <form id="subjectForm">
+                <label for="subjectName">Subject:</label>
+                <input type="text" id="subjectName" name="subjectName" required>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
