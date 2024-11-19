@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - School Diary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>School Diary</h1>
+        <p>Stay organized and keep track of your schedule</p>
+    </header>
+    
+    <main>
+        <aside>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="assignments.html">Assignments</a></li>
+                <li><a href="notes.html" class="active">Notes</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </aside>
+        
+        <section>
+            <h2>Your Notes</h2>
+            <div class="notes-container">
+                <form id="addNoteForm" class="note-form">
+                    <label for="noteText">Add a New Note:</label>
+                    <textarea id="noteText" name="noteText" rows="3" placeholder="Write your note here..." required></textarea>
+                    <button type="submit">Add Note</button>
+                </form>
+                
+                <div id="notesList" class="notes-list">
+                    <!-- Existing notes will be dynamically added here -->
+                    <div class="note">
+                        <p>Remember to review math notes for the test on Friday.</p>
+                        <button class="delete-note">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 School Diary. All rights reserved.</p>
+    </footer>
+
+    <script src="notes.js"></script>
+</body>
+</html>
